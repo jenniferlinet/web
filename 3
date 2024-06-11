@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>
+            simple shopping website
+        </title>
+        <link rel="stylesheet" type="text/css" href="style1.css">
+    </head>
+    <body>
+        <div class="topnavbar">
+            <h1>
+                Online shopping website
+            </h1>
+            <a href="#home">home</a>
+            <a href="#products">products</a>
+            <a href="#about">about</a>
+            <a href="#context">context</a>
+            <div class="topnavbar-right">
+            <a href="#account">account</a>
+            <a href="#cart">cart(0)</a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="search...">
+            <button type="submit">search</button>
+        </div>
+        </div>
+        <div class="items">
+            <div class="list">
+                <h2>
+                    sarees
+                </h2>
+                <ul>
+                    <li>
+                        <img src="img.jpg" width="50px" height="50px">
+                        <h4>
+                            Saree-1-1000rs
+                        </h4>
+                        <button>add to cart</button><br><br>
+                    </li>
+                    <li>
+                        <img src="img.jpg" width="50px" height="50px">
+                        <h4>
+                            Saree-2-2000rs
+                        </h4>
+                        <button>add to cart</button><br><br>
+                    </li>
+                </ul>
+            </div>
+            <div class="list">
+                <h2>
+                    shirts
+                </h2>
+                <ol>
+                    <li>
+                        <img src="img.jpg" width="50px" height="50px">
+                        <h4>
+                            Shirt-1-100rs
+                        </h4>
+                        <button>add to cart</button><br><br>
+                    </li>
+                    <li>
+                        <img src="img.jpg" width="50px" height="50px">
+                        <h4>
+                            Shirt-2-200rs
+                        </h4>
+                        <button>add to cart</button><br><br>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+css
+body{
+    margin: auto;
+}
+.topnavbar{
+    background-color: aqua;
+    position: absolute;
+    width: 100%;
+}
+.topnavbar a {
+    float: left;
+    display: block;
+    color:#f2f2f2;
+    text-align: center;
+    padding: 12px;
+    font-size: 15px;
+}
+.topnavbar-right{
+    float: right;
+}
+.topnavbar a:hover{
+    background-color: #ddd;
+    color: black;
+}
+.topnavbar h1{
+    color: black;
+    text-align: center;
+    font-size: 25px;
+}
+.topnavbar:search-container{
+    padding: 14px;
+    text-align: center;
+}
+.list{
+    float:left;
+    width:50%;
+    background-color: skyblue;
+}
+.items{
+    padding-top: 100px;
+}
