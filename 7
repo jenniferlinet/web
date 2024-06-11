@@ -1,0 +1,70 @@
+<html>
+     <head> 
+        <title>Calculator</title>
+     </head>
+     <style>
+        .calculator {
+            width: 300px;
+            border: 3px solid black;
+            padding: 10px;
+        }
+        input[type="text"]{
+            width: 100%;
+        }
+        input{
+            padding: 30px;
+        }
+        input:hover{
+            background: silver;
+        }
+    </style>   
+         
+<body>
+    <script>
+        function insert(value){
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculate() {
+            var expression = document.getElementById('display').value;
+            var result;
+            try {
+                result = eval(expression);
+                document.getElementById('display').value = result;
+            } catch (error) {
+                document.getElementById('display').value ='Error';
+            }
+
+        }
+    </script>
+    <center>
+        <div class = "calculator">    
+            <input type ="text" id = "display" readonly><br><br>
+            <input type = "button" value ="1" onclick ="insert(1)"/>
+            <input type = "button" value ="2" onclick ="insert(2)"/>
+            <input type = "button" value ="3" onclick ="insert(3)"/>
+            <input type = "button" value ="+" onclick ="insert('+')"/>
+            <br><br>
+            <input type = "button" value ="4" onclick ="insert(4)"/>
+            <input type = "button" value ="5" onclick ="insert(5)"/>
+            <input type = "button" value ="6" onclick ="insert(6)"/>
+            <input type = "button" value ="-" onclick ="insert('-')"/>
+            <br><br>
+            <input type = "button" value ="7" onclick ="insert(7)"/>
+            <input type = "button" value ="8" onclick ="insert(8)"/>
+            <input type = "button" value ="9" onclick ="insert(9)"/>
+            <input type = "button" value ="*" onclick ="insert('*')"/>
+            <br><br>
+            <input type = "button" value ="0" onclick ="insert(0)"/>
+            <input type = "button" value ="/" onclick ="insert('/')"/>
+            <input type = "button" value ="C" onclick ="clearDisplay()"/>
+            <input type = "button" value ="=" onclick ="calculate()"/>
+            <br>
+        </div>
+    </center>
+</body>
+</html>
