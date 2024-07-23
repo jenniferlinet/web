@@ -1,46 +1,24 @@
+<!DOCTYPE html>
 <html>
-    <body>
-        <h2>customer details</h2>
-        <style>
-            table{
-                border: 1px;
-                border-collapse: collapse;
-                width: 100%;
+<head>
+    <title>Rectangle Class</title>
+</head>
+<body>
+    <script>
+        class Rectangle {
+            constructor(length, breadth) {
+                this.length = length;
+                this.breadth = breadth;
             }
-            th{
-                background-color: pink;
+            calculateArea() {
+			
+			
+                return this.length * this.breadth;
             }
-            th,td{
-                text-align: left;
-                padding: 5px;
-                border: 1px solid;
-            }
-        </style>
-        <table row="2">
-            <tr>
-                <th>customer ID</th>
-                <th>name</th>
-                <th>experience</th>
-                <th>salary</th>
-            </tr>
-            <tr>
-                <td>100</td>
-                <td>jshfgiuw</td>
-                <td>2 years</td>
-                <td>60000</td>
-            </tr>
-            <tr>
-                <td>200</td>
-                <td>dkjjdshvui</td>
-                <td>3 years</td>
-                <td>70000</td>
-            </tr>
-            <tr>
-                <td>300</td>
-                <td>dkjhgek</td>
-                <td>4 years</td>
-                <td>80000</td>
-            </tr>
-        </table>
-    </body>
+        }
+        const rect = new Rectangle(5, 6);
+        document.write("Input: length=" + rect.length + ", breadth=" + rect.breadth + "<br>");
+        document.write("Output: Area=" + rect.calculateArea());
+    </script>
+</body>
 </html>
