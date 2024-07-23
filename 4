@@ -1,51 +1,33 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            registration page
-        </title>
-    </head>
-    <body style="background-color: lightpink;">
-    <h1>
-        student registration Form
-    </h1>
-    <fieldset style="width: 50%;">
-    <legend>student registration form</legend>
-    <form>
-        <label>
-            name:
-        </label>
-        <input type="text" name="name" pattern="[A-Za-z]{1,32}" placeholder="enter your name"/>
-        <br><br>
-        <label>usn:</label>
-        <input type="radio" name="usn" pattern="[A-Za-z]{1,32}"/>
-        <br><br>
-        <hr>
-        <label>usn:</label>
-        <input type="radio" name="gender" value="male"/>male
-        <input type="radio" name="gender" value="female"/>female
-        <input type="radio" name="gender" value="others"/>others
-        <br><br>
-        <label>course:</label>
-        <select>
-            <option value="course">course</option>
-            <option value="adv.web">adv.web</option>
-            <option value="java">java</option>
-            <option value="python">python</option>
-            <option value="ml">ml</option>
-        </select>
-        <br><br>
-        <hr>
-        <label>email</label>
-        <input type="email" id="email" name="email"/>
-        <br><br>
-        <label>phone</label>
-        <input type="text" name="phone" pattern="[0-9]{10}"/>
-        <br><br>
-        <label>address</label>
-        <textarea cols="80" rows="5" placeholder="enter the address"></textarea>
-        <br><br>
-        <input type="submit" onclick="alert('successfully registered')" value="reset">
-    </form>
-    </fieldset>
-    </body>
+<head>
+  <title>Leap Year Check</title>
+</head>
+<body>
+<script>
+const isLeapYear = year => {
+    // Check if the year is divisible by 4
+    if (year % 4 === 0) {
+        if (year % 100 === 0 && year % 400 !== 0) {
+            return false; // Not a leap year
+        } else {
+            return true; // Leap year
+        }
+    } else {
+        return false; // Not a leap year
+    }
+};
+const alertLeapYear = () => {
+    const checkYear = prompt('Enter a year:');
+    const result = isLeapYear(parseInt(checkYear));
+    if(result){
+        alert(checkYear + " is a leap year");
+    } else {
+        alert(checkYear + " is not a leap year");
+    }
+};
+alertLeapYear();
+</script>
+</body>
 </html>
+>
